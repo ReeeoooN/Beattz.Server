@@ -1,0 +1,88 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/leo/RiderProjects/Beattz.Server/Beattz.Server/Beattz.Server.csproj": {}
+  },
+  "projects": {
+    "/home/leo/RiderProjects/Beattz.Server/Beattz.Server/Beattz.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/leo/RiderProjects/Beattz.Server/Beattz.Server/Beattz.Server.csproj",
+        "projectName": "Beattz.Server",
+        "projectPath": "/home/leo/RiderProjects/Beattz.Server/Beattz.Server/Beattz.Server.csproj",
+        "packagesPath": "/home/leo/.nuget/packages/",
+        "outputPath": "/home/leo/RiderProjects/Beattz.Server/Beattz.Server/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/leo/RiderProjects/Beattz.Server/NuGet.config",
+          "/home/leo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://nexus.kontur.host/repository/nuget/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[14.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Vostok.Logging.Console": {
+              "target": "Package",
+              "version": "[1.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

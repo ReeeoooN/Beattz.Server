@@ -5,7 +5,7 @@ namespace Beattz.Server.Models.Persistance.Repository;
 
 public class FakeTracksRepository (ILog logger) : ITrackRepository
 {
-    private static TrackEntity[] tracks = new[]
+    private static List<TrackEntity> tracks = new List<TrackEntity>
     {
         new TrackEntity
         {
@@ -37,12 +37,27 @@ public class FakeTracksRepository (ILog logger) : ITrackRepository
     {
         try
         {
-            return Task.FromResult(tracks);
+            return Task.FromResult(tracks.ToArray());
         }
         catch (Exception e)
         {
             logger.Error(e, "Error selecting tracks");
             throw;
         }
+    }
+
+    public Task<TrackEntity> insertTrackAsync(TrackEntity track)
+    {
+        tracks.Add(track);
+        return Task.FromResult(track);
+    }
+
+    public Task<TrackEntity[]> removeTracksAsync(TrackEntity[] removedTracks)
+    {
+        foreach (var track in removedTracks)
+        {
+            tracks.Remove(track);
+        }
+        return Task.FromResult(removedTracks);
     }
 }

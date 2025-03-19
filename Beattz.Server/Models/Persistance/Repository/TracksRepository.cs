@@ -32,4 +32,34 @@ public class TracksRepository (TracksDbContext db, ILog logger) : ITrackReposito
             throw;
         }
     }
+
+    public async Task<TrackEntity> insertTrackAsync(TrackEntity track)
+    {
+        try
+        {
+            await db.tracks.AddAsync(track);
+            await db.SaveChangesAsync();
+            return track;
+        }
+        catch (Exception e)
+        {
+            logger.Error(e, "Error while inserting track");
+            throw;
+        }
+    }
+
+    public async Task<TrackEntity[]> removeTracksAsync(TrackEntity[] tracks)
+    {
+        try
+        {
+            db.tracks.RemoveRange(tracks);
+            await db.SaveChangesAsync();
+            return tracks;
+        }
+        catch (Exception e)
+        {
+            logger.Error(e, "Error while removing tracks");
+            throw;
+        }
+    }
 }

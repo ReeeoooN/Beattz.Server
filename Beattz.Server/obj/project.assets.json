@@ -18,6 +18,42 @@
           }
         }
       },
+      "Kontur.IDevOps.Core.Application.Schedule/9.0.3997": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Kontur.IDevOps.Core.Application.Schedule.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Kontur.IDevOps.Core.Application.Schedule.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Kontur.IDevOps.Core.Application.Schedule.Crontab/9.0.3997": {
+        "type": "package",
+        "dependencies": {
+          "Kontur.IDevOps.Core.Application.Schedule": "9.0.3997",
+          "NCrontab": "3.3.3"
+        },
+        "compile": {
+          "lib/net8.0/Kontur.IDevOps.Core.Application.Schedule.Crontab.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Kontur.IDevOps.Core.Application.Schedule.Crontab.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.EntityFrameworkCore/9.0.2": {
         "type": "package",
         "dependencies": {
@@ -247,6 +283,19 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "NCrontab/3.3.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NCrontab.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NCrontab.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Npgsql/9.0.3": {
         "type": "package",
         "dependencies": {
@@ -343,6 +392,34 @@
         "icon.png",
         "lib/net8.0/AutoMapper.dll",
         "lib/net8.0/AutoMapper.xml"
+      ]
+    },
+    "Kontur.IDevOps.Core.Application.Schedule/9.0.3997": {
+      "sha512": "/qFQmjVD18BIgJd1ugAnwH4Sj2SFFGQA5X+CVFfmBxWDGVyf0pp0kKKDioD5Kq7K0p7aeb0QZWQpgG8ivgkJMA==",
+      "type": "package",
+      "path": "kontur.idevops.core.application.schedule/9.0.3997",
+      "files": [
+        ".nupkg.metadata",
+        "kontur.idevops.core.application.schedule.9.0.3997.nupkg.sha512",
+        "kontur.idevops.core.application.schedule.nuspec",
+        "lib/net6.0/Kontur.IDevOps.Core.Application.Schedule.dll",
+        "lib/net6.0/Kontur.IDevOps.Core.Application.Schedule.xml",
+        "lib/net8.0/Kontur.IDevOps.Core.Application.Schedule.dll",
+        "lib/net8.0/Kontur.IDevOps.Core.Application.Schedule.xml"
+      ]
+    },
+    "Kontur.IDevOps.Core.Application.Schedule.Crontab/9.0.3997": {
+      "sha512": "gWlHbhRAvAnAFpVCnlTDwCxKRRaaVdV4Gi1cq+z6BUdgSiOVh1iVhIpiqaqS3sRBHBVu/91aF2UOa8Wc4Pjo8g==",
+      "type": "package",
+      "path": "kontur.idevops.core.application.schedule.crontab/9.0.3997",
+      "files": [
+        ".nupkg.metadata",
+        "kontur.idevops.core.application.schedule.crontab.9.0.3997.nupkg.sha512",
+        "kontur.idevops.core.application.schedule.crontab.nuspec",
+        "lib/net6.0/Kontur.IDevOps.Core.Application.Schedule.Crontab.dll",
+        "lib/net6.0/Kontur.IDevOps.Core.Application.Schedule.Crontab.xml",
+        "lib/net8.0/Kontur.IDevOps.Core.Application.Schedule.Crontab.dll",
+        "lib/net8.0/Kontur.IDevOps.Core.Application.Schedule.Crontab.xml"
       ]
     },
     "Microsoft.EntityFrameworkCore/9.0.2": {
@@ -723,6 +800,24 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "NCrontab/3.3.3": {
+      "sha512": "2yzZXZLI0YpxrNgWnW/4xoo7ErLgWJIwTljRVEJ3hyjc7Kw9eGdjbFZGP1AhBuTUEZQ443PgZifG1yox6Qo1/A==",
+      "type": "package",
+      "path": "ncrontab/3.3.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "COPYING.txt",
+        "lib/net35/NCrontab.dll",
+        "lib/net35/NCrontab.pdb",
+        "lib/netstandard1.0/NCrontab.dll",
+        "lib/netstandard1.0/NCrontab.pdb",
+        "lib/netstandard2.0/NCrontab.dll",
+        "lib/netstandard2.0/NCrontab.pdb",
+        "ncrontab.3.3.3.nupkg.sha512",
+        "ncrontab.nuspec"
+      ]
+    },
     "Npgsql/9.0.3": {
       "sha512": "tPvY61CxOAWxNsKLEBg+oR646X4Bc8UmyQ/tJszL/7mEmIXQnnBhVJZrZEEUv0Bstu0mEsHZD5At3EO8zQRAYw==",
       "type": "package",
@@ -813,6 +908,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "AutoMapper >= 14.0.0",
+      "Kontur.IDevOps.Core.Application.Schedule.Crontab >= 9.0.3997",
       "Microsoft.EntityFrameworkCore >= 9.0.2",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4",
       "Vostok.Logging.Console >= 1.0.11"
@@ -864,6 +960,10 @@
           "AutoMapper": {
             "target": "Package",
             "version": "[14.0.0, )"
+          },
+          "Kontur.IDevOps.Core.Application.Schedule.Crontab": {
+            "target": "Package",
+            "version": "[9.0.3997, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

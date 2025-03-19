@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[14.0.0, )"
             },
+            "Kontur.IDevOps.Core.Application.Schedule.Crontab": {
+              "target": "Package",
+              "version": "[9.0.3997, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.2, )"

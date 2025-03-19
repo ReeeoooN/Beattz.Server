@@ -21,6 +21,9 @@ builder.Services.AddSingleton(x =>
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddScoped<ITrackRepository, FakeTracksRepository>();
 builder.Services.AddScoped<ITrackService, TrackService>();
+builder.Services.AddScoped<IUploadTrackService, TrackImportService>();
+builder.Services.AddScoped<IActualizeTrackList, FileSyncService>();
+builder.Services.AddHostedService<CrontabSync>();
 
 var app = builder.Build();
 
